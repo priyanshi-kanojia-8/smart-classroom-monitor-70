@@ -1,5 +1,6 @@
 import { Cpu, Thermometer, Flame, Radio, Volume2, Lightbulb, Bell, Cable } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import circuitDiagram from "@/assets/circuit-diagram.png";
 
 const HardwareSection = () => {
   const hardware = [
@@ -88,8 +89,12 @@ const HardwareSection = () => {
 
         <div className="mt-16 p-8 bg-card rounded-xl border border-border shadow-lg">
           <h3 className="text-2xl font-bold mb-4 text-center">Circuit Overview</h3>
-          <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-            <p className="text-muted-foreground">Circuit Diagram Placeholder</p>
+          <div className="rounded-lg overflow-hidden">
+            <img 
+              src={circuitDiagram} 
+              alt="ESP32 Circuit Diagram showing connections between ESP32, DHT11, PIR sensor, flame sensor, sound sensor, LEDs, and active buzzer"
+              className="w-full h-auto"
+            />
           </div>
           <p className="text-center text-sm text-muted-foreground mt-4">
             Complete wiring diagram showing ESP32 connections to all sensors and output devices

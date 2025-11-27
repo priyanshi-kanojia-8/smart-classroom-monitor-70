@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Card } from "./ui/card";
+import systemArchitecture from "@/assets/system-architecture.png";
 
 const WorkingSection = () => {
   const steps = [
@@ -122,8 +123,12 @@ const WorkingSection = () => {
 
         <div className="mt-16 p-8 bg-card rounded-xl border border-border shadow-lg">
           <h3 className="text-2xl font-bold mb-4 text-center">System Architecture</h3>
-          <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-            <p className="text-muted-foreground">Block Diagram Placeholder</p>
+          <div className="rounded-lg overflow-hidden bg-white p-8">
+            <img 
+              src={systemArchitecture} 
+              alt="System Architecture diagram showing data flow from sensors through ESP32 to ThingSpeak and web dashboard"
+              className="w-full h-auto"
+            />
           </div>
           <p className="text-center text-sm text-muted-foreground mt-4">
             Complete system architecture showing data flow from sensors to cloud dashboard
