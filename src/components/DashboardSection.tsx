@@ -84,23 +84,36 @@ const DashboardSection = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-6">
-              <div className="text-center">
-                <Activity size={48} className="text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground mb-2">ThingSpeak Dashboard Embed</p>
-                <p className="text-sm text-muted-foreground">
-                  Replace with iframe code from your ThingSpeak channel
-                </p>
-                <code className="text-xs bg-background px-3 py-1 rounded mt-2 inline-block">
-                  &lt;iframe src="https://thingspeak.com/channels/YOUR_CHANNEL_ID"&gt;
-                </code>
-              </div>
+            <div className="rounded-lg overflow-hidden mb-6 border border-border">
+              <iframe 
+                width="100%" 
+                height="500" 
+                src="https://thingspeak.com/channels/3184794/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"
+                title="ThingSpeak Channel 3184794 - RoomSense360"
+                className="w-full"
+              />
             </div>
-            <div className="text-center">
-              <Button size="lg" className="gap-2">
-                Open Full Dashboard
-                <ExternalLink size={18} />
-              </Button>
+            <div className="text-center space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <div className="p-4 bg-muted rounded-lg">
+                  <p className="text-sm font-semibold mb-1">Channel ID</p>
+                  <code className="text-xs bg-background px-3 py-1 rounded">3184794</code>
+                </div>
+                <div className="p-4 bg-muted rounded-lg">
+                  <p className="text-sm font-semibold mb-1">Write API Key</p>
+                  <code className="text-xs bg-background px-3 py-1 rounded">GP6Y4LB0TPDMDDSM</code>
+                </div>
+              </div>
+              <a 
+                href="https://thingspeak.com/channels/3184794" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="gap-2">
+                  Open Full Dashboard
+                  <ExternalLink size={18} />
+                </Button>
+              </a>
               <p className="text-xs text-muted-foreground mt-2">
                 View detailed analytics and historical data on ThingSpeak
               </p>

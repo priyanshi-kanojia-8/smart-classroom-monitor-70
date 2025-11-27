@@ -21,14 +21,12 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="mb-8 inline-block">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
-            IoT Lab Project 2024
+            IoT Mini Project 2025
           </span>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Smart Classroom Environmental
-          <br />
-          <span className="gradient-text">Monitoring & Safety System</span>
+          <span className="gradient-text">RoomSense360</span>
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto">
@@ -41,6 +39,7 @@ const HeroSection = () => {
             <span className="px-3 py-1 bg-card border border-border rounded-full">DHT11</span>
             <span className="px-3 py-1 bg-card border border-border rounded-full">PIR Sensor</span>
             <span className="px-3 py-1 bg-card border border-border rounded-full">Flame Sensor</span>
+            <span className="px-3 py-1 bg-card border border-border rounded-full">Sound Sensor</span>
             <span className="px-3 py-1 bg-card border border-border rounded-full">ThingSpeak</span>
           </div>
         </div>
