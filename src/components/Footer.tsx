@@ -17,7 +17,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Project Details</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>IoT Lab Project 2024</li>
+              <li>IoT Mini Project 2025</li>
               <li>Computer Science Department</li>
               <li>IGDTUW, New Delhi</li>
             </ul>
@@ -35,25 +35,29 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Smart Classroom IoT Project. All rights reserved.
+            © 2025 RoomSense360 Project. All rights reserved.
           </p>
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://github.com/Ri2-4"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <Github size={20} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/richa-sukla-2484482bb/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
             </a>
             <a
-              href="#"
+              href="mailto:priyanshik30@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >

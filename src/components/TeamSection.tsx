@@ -1,11 +1,14 @@
 import { GraduationCap, Users, Building2 } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
+import priyanshiPhoto from "@/assets/priyanshi-photo.png";
+import richaPhoto from "@/assets/richa-photo.png";
+import rituPhoto from "@/assets/ritu-photo.png";
 
 const TeamSection = () => {
   const teamMembers = [
-    { name: "Priyanshi", role: "Hardware & Circuit Design" },
-    { name: "Richa Shukla", role: "Software & Cloud Integration" },
-    { name: "Ritu Sharma", role: "Testing & Documentation" },
+    { name: "Priyanshi", role: "Hardware & Circuit Design", photo: priyanshiPhoto },
+    { name: "Richa Shukla", role: "Software & Cloud Integration", photo: richaPhoto },
+    { name: "Ritu Sharma", role: "Testing & Documentation", photo: rituPhoto },
   ];
 
   return (
@@ -24,8 +27,12 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <Card key={index} className="card-hover border-border text-center">
               <CardContent className="pt-8 pb-8">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-info flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  {member.name.charAt(0)}
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-primary/20">
+                  <img 
+                    src={member.photo} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                 <p className="text-sm text-muted-foreground">{member.role}</p>
@@ -60,7 +67,7 @@ const TeamSection = () => {
               <Users className="text-warning mx-auto mb-4" size={48} />
               <h3 className="text-lg font-bold mb-2">Project Type</h3>
               <p className="text-sm text-muted-foreground">
-                IoT Lab Project<br />Academic Year 2024
+                IoT Mini Project<br />Academic Year 2025
               </p>
             </CardContent>
           </Card>
