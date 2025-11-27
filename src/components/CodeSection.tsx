@@ -149,10 +149,10 @@ void loop() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            ESP32 Source Code
+            ESP Source Code with ThingSpeak and Bluetooth Integration
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Complete Arduino code for the Smart Classroom monitoring system
+            Arduino IDE code for the Smart Classroom monitoring system
           </p>
         </div>
 

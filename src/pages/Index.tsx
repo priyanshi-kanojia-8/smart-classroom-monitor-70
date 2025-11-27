@@ -4,6 +4,7 @@ import HardwareSection from "@/components/HardwareSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import WorkingSection from "@/components/WorkingSection";
 import DashboardSection from "@/components/DashboardSection";
+import BluetoothSection from "@/components/BluetoothSection";
 import CodeSection from "@/components/CodeSection";
 import DemoSection from "@/components/DemoSection";
 import TeamSection from "@/components/TeamSection";
@@ -19,6 +20,7 @@ const Index = () => {
         <FeaturesSection />
         <WorkingSection />
         <DashboardSection />
+        <BluetoothSection />
         <CodeSection />
         <DemoSection />
         <TeamSection />
