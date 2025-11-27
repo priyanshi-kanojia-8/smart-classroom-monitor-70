@@ -1,4 +1,4 @@
-import { Cpu, Thermometer, Flame, Radio, Volume2, Lightbulb, Bell, Cable } from "lucide-react";
+                                                                                                                                                                                              import { Cpu, Thermometer, Flame, Radio, Volume2, Lightbulb, Bell, Cable } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import circuitDiagram from "@/assets/circuit-diagram.png";
 
