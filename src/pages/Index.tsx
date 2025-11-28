@@ -6,6 +6,7 @@ import WorkingSection from "@/components/WorkingSection";
 import DashboardSection from "@/components/DashboardSection";
 import BluetoothSection from "@/components/BluetoothSection";
 import CodeSection from "@/components/CodeSection";
+import BluetoothCodeSection from "@/components/BluetoothCodeSection";
 import DemoSection from "@/components/DemoSection";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
@@ -20,9 +21,10 @@ const Index = () => {
         <FeaturesSection />
         <WorkingSection />
         <DashboardSection />
-        <BluetoothSection />
-        <CodeSection />
-        <DemoSection />
+      <BluetoothSection />
+      <CodeSection />
+      <BluetoothCodeSection />
+      <DemoSection />
         <TeamSection />
       </main>
       <Footer />

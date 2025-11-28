@@ -7,6 +7,9 @@ import sensorIntegration1 from "@/assets/sensor-integration-1.png";
 import sensorIntegration2 from "@/assets/sensor-integration-2.png";
 import hardwareSetup1 from "@/assets/hardware-setup-1.png";
 import hardwareSetup2 from "@/assets/hardware-setup-2.png";
+import systemRunning1 from "@/assets/system-running-1.png";
+import systemRunning2 from "@/assets/system-running-2.png";
+import systemRunning3 from "@/assets/system-running-3.png";
 
 const DemoSection = () => {
   return (
@@ -172,11 +175,39 @@ const DemoSection = () => {
               <CardDescription>LEDs and buzzer demonstration</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
-                <p className="text-muted-foreground text-center">
-                  System Running<br />Photo Placeholder
-                </p>
-              </div>
+              <Carousel className="w-full mb-4">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={systemRunning1} 
+                        alt="System running with LEDs active and DHT11 sensor" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={systemRunning2} 
+                        alt="ESP32 with active buzzer and complete wiring setup" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={systemRunning3} 
+                        alt="System demonstrating flame and sound sensor alerts with LED indicators" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
               <p className="text-sm text-muted-foreground">
                 Active monitoring with LED indicators and buzzer during fire detection
               </p>
