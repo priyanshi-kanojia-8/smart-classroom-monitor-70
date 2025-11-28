@@ -1,5 +1,12 @@
 import { Play, Image as ImageIcon } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+import classroomModel1 from "@/assets/classroom-model-1.png";
+import classroomModel2 from "@/assets/classroom-model-2.png";
+import sensorIntegration1 from "@/assets/sensor-integration-1.png";
+import sensorIntegration2 from "@/assets/sensor-integration-2.png";
+import hardwareSetup1 from "@/assets/hardware-setup-1.png";
+import hardwareSetup2 from "@/assets/hardware-setup-2.png";
 
 const DemoSection = () => {
   return (
@@ -25,14 +32,15 @@ const DemoSection = () => {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <Play size={64} className="text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">Demo Video Placeholder</p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Upload your project demo video here
-                </p>
-              </div>
+            <div className="aspect-video bg-black rounded-lg overflow-hidden">
+              <video 
+                controls 
+                className="w-full h-full object-cover"
+                preload="metadata"
+              >
+                <source src="/demo-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </CardContent>
         </Card>
@@ -47,11 +55,30 @@ const DemoSection = () => {
               <CardDescription>DIY prototype classroom setup</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
-                <p className="text-muted-foreground text-center">
-                  Classroom Model<br />Photo Placeholder
-                </p>
-              </div>
+              <Carousel className="w-full mb-4">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={classroomModel1} 
+                        alt="Cardboard classroom model - top view showing sensor placements" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={classroomModel2} 
+                        alt="Cardboard classroom model - side view with hardware setup" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
               <p className="text-sm text-muted-foreground">
                 Our affordable cardboard classroom model demonstrates the sensor placement and system layout
               </p>
@@ -67,11 +94,30 @@ const DemoSection = () => {
               <CardDescription>Complete circuit assembly</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
-                <p className="text-muted-foreground text-center">
-                  Hardware Setup<br />Photo Placeholder
-                </p>
-              </div>
+              <Carousel className="w-full mb-4">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={hardwareSetup1} 
+                        alt="Hardware setup with ESP32, breadboard, and active buzzer" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={hardwareSetup2} 
+                        alt="Complete hardware setup showing all wiring connections" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
               <p className="text-sm text-muted-foreground">
                 ESP32 with all sensors and output devices connected on breadboard
               </p>
@@ -87,11 +133,30 @@ const DemoSection = () => {
               <CardDescription>Close-up of sensor connections</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
-                <p className="text-muted-foreground text-center">
-                  Sensor Close-up<br />Photo Placeholder
-                </p>
-              </div>
+              <Carousel className="w-full mb-4">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={sensorIntegration1} 
+                        alt="Close-up of flame and sound sensors with LED indicators" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                      <img 
+                        src={sensorIntegration2} 
+                        alt="DHT11 and PIR sensor integration with LED alert system" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
               <p className="text-sm text-muted-foreground">
                 Detailed view of DHT11, PIR, flame, and sound sensor wiring
               </p>
