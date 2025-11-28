@@ -88,8 +88,8 @@ const DashboardSection = () => {
               <iframe 
                 width="100%" 
                 height="500" 
-                src="https://thingspeak.com/channels/3184794/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"
-                title="ThingSpeak Channel 3184794 - RoomSense360"
+                src="https://thingspeak.com/channels/3185959/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"
+                title="ThingSpeak Channel 3185959 - RoomSense360"
                 className="w-full"
               />
             </div>
@@ -97,15 +97,15 @@ const DashboardSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
                 <div className="p-4 bg-muted rounded-lg">
                   <p className="text-sm font-semibold mb-1">Channel ID</p>
-                  <code className="text-xs bg-background px-3 py-1 rounded">3184794</code>
+                  <code className="text-xs bg-background px-3 py-1 rounded">3185959</code>
                 </div>
                 <div className="p-4 bg-muted rounded-lg">
                   <p className="text-sm font-semibold mb-1">Write API Key</p>
-                  <code className="text-xs bg-background px-3 py-1 rounded">GP6Y4LB0TPDMDDSM</code>
+                  <code className="text-xs bg-background px-3 py-1 rounded">R4GJTC3Q6QDA73JW</code>
                 </div>
               </div>
               <a 
-                href="https://thingspeak.com/channels/3184794" 
+                href="https://thingspeak.com/channels/3185959" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
