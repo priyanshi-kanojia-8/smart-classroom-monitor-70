@@ -10,17 +10,25 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#f0f4ff] via-white to-[#faf5ff]">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#f5f8ff] via-[#ffffff] to-[#faf6ff]">
       
-      {/* Subtle Geometric Shapes */}
-      <div className="absolute top-20 right-20 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl animate-pulse-subtle"></div>
-      <div className="absolute bottom-32 left-20 w-80 h-80 bg-purple-100/30 rounded-full blur-3xl animate-pulse-subtle" style={{ animationDelay: '2s' }}></div>
+      {/* Soft Abstract Floating Shapes */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/50 to-cyan-100/30 rounded-full blur-3xl animate-float-gentle opacity-60"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-purple-100/40 to-pink-100/20 rounded-full blur-3xl animate-float-gentle opacity-50" style={{ animationDelay: '3s' }}></div>
+      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-to-br from-indigo-100/30 to-blue-50/20 rounded-full blur-3xl animate-float-gentle opacity-40" style={{ animationDelay: '5s' }}></div>
       
-      {/* Soft Wave Effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 opacity-30">
+      {/* Subtle Particle Texture Overlay */}
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(147, 197, 253, 0.15) 1px, transparent 0)`,
+        backgroundSize: '40px 40px'
+      }}></div>
+      
+      {/* Layered Soft Waves */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 opacity-20">
         <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,50 C300,100 600,0 900,50 C1050,75 1200,50 1200,50 L1200,120 L0,120 Z" fill="#e0e7ff" opacity="0.4"></path>
-          <path d="M0,70 C300,20 600,100 900,70 C1050,55 1200,70 1200,70 L1200,120 L0,120 Z" fill="#f0f4ff" opacity="0.3"></path>
+          <path d="M0,50 C300,90 600,10 900,50 C1050,70 1200,50 1200,50 L1200,120 L0,120 Z" fill="#dbeafe" opacity="0.5"></path>
+          <path d="M0,70 C300,30 600,90 900,60 C1050,50 1200,70 1200,70 L1200,120 L0,120 Z" fill="#e0e7ff" opacity="0.4"></path>
+          <path d="M0,85 C300,60 600,100 900,80 C1050,75 1200,85 1200,85 L1200,120 L0,120 Z" fill="#f0f4ff" opacity="0.3"></path>
         </svg>
       </div>
 
