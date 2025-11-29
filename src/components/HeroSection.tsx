@@ -10,117 +10,92 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Premium Gradient Background with Mesh */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-info/5 to-background">
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            background: 'var(--gradient-mesh)',
-          }}
-        />
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#f0f4ff] via-white to-[#faf5ff]">
       
-      {/* Animated Floating Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-glow"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-info/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }}></div>
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-primary/30 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
+      {/* Subtle Geometric Shapes */}
+      <div className="absolute top-20 right-20 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl animate-pulse-subtle"></div>
+      <div className="absolute bottom-32 left-20 w-80 h-80 bg-purple-100/30 rounded-full blur-3xl animate-pulse-subtle" style={{ animationDelay: '2s' }}></div>
+      
+      {/* Soft Wave Effect */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 opacity-30">
+        <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,50 C300,100 600,0 900,50 C1050,75 1200,50 1200,50 L1200,120 L0,120 Z" fill="#e0e7ff" opacity="0.4"></path>
+          <path d="M0,70 C300,20 600,100 900,70 C1050,55 1200,70 1200,70 L1200,120 L0,120 Z" fill="#f0f4ff" opacity="0.3"></path>
+        </svg>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl">
+        
         {/* Badge */}
-        <div className="mb-8 inline-block animate-fade-in">
-          <span className="inline-flex items-center gap-2 px-6 py-3 glass-card rounded-full text-sm font-semibold hover-lift">
-            <Cpu className="w-4 h-4 text-primary animate-pulse" />
+        <div className="mb-8 inline-block animate-fade-in-soft">
+          <span className="inline-flex items-center gap-2 px-5 py-2 bg-white/70 backdrop-blur-sm border border-slate-200/50 rounded-full text-xs font-medium text-slate-600 shadow-sm">
+            <Cpu className="w-3.5 h-3.5 text-blue-500" />
             IoT Mini Project 2025
           </span>
         </div>
 
-        {/* Main Title with Glassmorphism Card */}
-        <div className="mb-8 inline-block animate-float">
-          <div className="glass-card px-12 py-8 rounded-3xl max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-              <span 
-                className="gradient-text animate-gradient-shift"
-                style={{
-                  backgroundSize: '200% auto',
-                  backgroundImage: 'linear-gradient(90deg, hsl(var(--primary)), hsl(var(--info)), hsl(var(--accent)), hsl(var(--primary)))',
-                }}
-              >
-                RoomSense360
-              </span>
-            </h1>
-          </div>
+        {/* Main Title - Clean & Minimal */}
+        <div className="mb-6 animate-fade-in-soft" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-slate-800 mb-2">
+            <span className="font-semibold bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+              RoomSense360
+            </span>
+          </h1>
         </div>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-2xl text-foreground/80 mb-6 max-w-3xl mx-auto font-medium animate-slide-up leading-relaxed">
+        <p className="text-base md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto font-light leading-relaxed animate-fade-in-soft" style={{ animationDelay: '0.4s' }}>
           IoT-based real-time monitoring system using ESP32 and ThingSpeak cloud platform
         </p>
 
-        {/* Sensor Tags with Icons and Glow */}
-        <div className="mb-12 flex flex-col items-center gap-4 animate-slide-up" style={{ animationDelay: '0.5s' }}>
-          <div className="flex flex-wrap justify-center gap-3 text-sm">
-            <span className="group px-4 py-2.5 glass-card rounded-full flex items-center gap-2 hover-lift cursor-pointer">
-              <Cpu className="w-4 h-4 text-primary group-hover:animate-pulse" />
-              <span className="font-medium">ESP32</span>
+        {/* Sensor Tags - Minimal & Clean */}
+        <div className="mb-16 flex flex-col items-center gap-6 animate-fade-in-soft" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-wrap justify-center gap-3 text-sm max-w-3xl">
+            <span className="group px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200/60 rounded-full flex items-center gap-2 minimal-hover cursor-pointer shadow-sm">
+              <Cpu className="w-3.5 h-3.5 text-blue-500" />
+              <span className="text-slate-700 font-medium">ESP32</span>
             </span>
-            <span className="group px-4 py-2.5 glass-card rounded-full flex items-center gap-2 hover-lift cursor-pointer">
-              <Thermometer className="w-4 h-4 text-info group-hover:animate-pulse" />
-              <span className="font-medium">DHT11</span>
+            <span className="group px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200/60 rounded-full flex items-center gap-2 minimal-hover cursor-pointer shadow-sm">
+              <Thermometer className="w-3.5 h-3.5 text-cyan-500" />
+              <span className="text-slate-700 font-medium">DHT11</span>
             </span>
-            <span className="group px-4 py-2.5 glass-card rounded-full flex items-center gap-2 hover-lift cursor-pointer">
-              <Radio className="w-4 h-4 text-accent group-hover:animate-pulse" />
-              <span className="font-medium">PIR Sensor</span>
+            <span className="group px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200/60 rounded-full flex items-center gap-2 minimal-hover cursor-pointer shadow-sm">
+              <Radio className="w-3.5 h-3.5 text-green-500" />
+              <span className="text-slate-700 font-medium">PIR Sensor</span>
             </span>
-            <span className="group px-4 py-2.5 glass-card rounded-full flex items-center gap-2 hover-lift cursor-pointer">
-              <Flame className="w-4 h-4 text-destructive group-hover:animate-pulse" />
-              <span className="font-medium">Flame Sensor</span>
+            <span className="group px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200/60 rounded-full flex items-center gap-2 minimal-hover cursor-pointer shadow-sm">
+              <Flame className="w-3.5 h-3.5 text-orange-500" />
+              <span className="text-slate-700 font-medium">Flame Sensor</span>
             </span>
-            <span className="group px-4 py-2.5 glass-card rounded-full flex items-center gap-2 hover-lift cursor-pointer">
-              <Volume2 className="w-4 h-4 text-warning group-hover:animate-pulse" />
-              <span className="font-medium">Sound Sensor</span>
+            <span className="group px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200/60 rounded-full flex items-center gap-2 minimal-hover cursor-pointer shadow-sm">
+              <Volume2 className="w-3.5 h-3.5 text-amber-500" />
+              <span className="text-slate-700 font-medium">Sound Sensor</span>
             </span>
-            <span className="group px-4 py-2.5 glass-card rounded-full flex items-center gap-2 hover-lift cursor-pointer">
-              <Cloud className="w-4 h-4 text-primary group-hover:animate-pulse" />
-              <span className="font-medium">ThingSpeak</span>
+            <span className="group px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200/60 rounded-full flex items-center gap-2 minimal-hover cursor-pointer shadow-sm">
+              <Cloud className="w-3.5 h-3.5 text-blue-500" />
+              <span className="text-slate-700 font-medium">ThingSpeak</span>
             </span>
           </div>
         </div>
 
-        {/* Developed By Section */}
-        <div className="mb-16 space-y-3 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-          <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Developed By</p>
-          <div className="flex flex-wrap justify-center gap-4 text-lg">
-            <span className="font-bold text-foreground hover:text-primary transition-colors duration-300 hover:scale-110 inline-block cursor-pointer">
+        {/* Developed By Section - Clean & Elegant */}
+        <div className="mb-12 space-y-4 animate-fade-in-soft" style={{ animationDelay: '0.8s' }}>
+          <p className="text-xs font-medium text-slate-500 uppercase tracking-widest">Developed By</p>
+          <div className="flex flex-wrap justify-center items-center gap-3 text-base">
+            <span className="font-medium text-slate-700 hover:text-blue-600 transition-colors duration-500 cursor-pointer">
               Priyanshi
             </span>
-            <span className="text-muted-foreground">•</span>
-            <span className="font-bold text-foreground hover:text-primary transition-colors duration-300 hover:scale-110 inline-block cursor-pointer">
+            <span className="text-slate-300">•</span>
+            <span className="font-medium text-slate-700 hover:text-blue-600 transition-colors duration-500 cursor-pointer">
               Richa Shukla
             </span>
-            <span className="text-muted-foreground">•</span>
-            <span className="font-bold text-foreground hover:text-primary transition-colors duration-300 hover:scale-110 inline-block cursor-pointer">
+            <span className="text-slate-300">•</span>
+            <span className="font-medium text-slate-700 hover:text-blue-600 transition-colors duration-500 cursor-pointer">
               Ritu Sharma
             </span>
           </div>
-          <div className="glass-card inline-block px-6 py-3 rounded-full mt-4">
-            <p className="text-sm text-foreground/70 font-medium">
+          <div className="inline-block px-6 py-3 bg-white/50 backdrop-blur-sm border border-slate-200/40 rounded-2xl mt-3 shadow-sm">
+            <p className="text-xs text-slate-600 font-light leading-relaxed">
               Department of Computer Science & Engineering
               <br />
               Indira Gandhi Delhi Technical University for Women
@@ -128,12 +103,12 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: '1s' }}>
+        {/* Action Buttons - Minimal Style */}
+        <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in-soft" style={{ animationDelay: '1s' }}>
           <Button
             size="lg"
             onClick={() => scrollToSection("hardware")}
-            className="shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all duration-300 text-base px-8 py-6 hover:scale-105"
+            className="bg-slate-800 hover:bg-slate-700 text-white shadow-sm hover:shadow-md transition-all duration-500 text-sm px-8 py-5 rounded-full font-medium"
           >
             Explore Hardware
           </Button>
@@ -141,20 +116,20 @@ const HeroSection = () => {
             size="lg"
             variant="outline"
             onClick={() => scrollToSection("dashboard")}
-            className="glass-card hover:bg-primary/10 text-base px-8 py-6 hover:scale-105 border-2"
+            className="bg-white/60 backdrop-blur-sm border-slate-300 hover:bg-white hover:border-slate-400 text-slate-700 text-sm px-8 py-5 rounded-full font-medium transition-all duration-500"
           >
             View Live Dashboard
           </Button>
         </div>
 
-        {/* Animated Scroll Indicator */}
+        {/* Minimal Scroll Indicator */}
         <button
           onClick={() => scrollToSection("hardware")}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce group"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-float-gentle group"
           aria-label="Scroll down"
         >
-          <div className="glass-card p-3 rounded-full group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300">
-            <ChevronDown size={28} className="text-primary group-hover:text-info transition-colors" />
+          <div className="p-2 bg-white/60 backdrop-blur-sm border border-slate-200/60 rounded-full shadow-sm group-hover:shadow-md transition-all duration-500">
+            <ChevronDown size={20} className="text-slate-400 group-hover:text-slate-600 transition-colors" />
           </div>
         </button>
       </div>
