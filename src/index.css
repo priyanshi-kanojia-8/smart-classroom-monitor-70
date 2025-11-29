@@ -50,6 +50,13 @@ All colors MUST be HSL.
 
     --gradient-hero: linear-gradient(135deg, hsl(217 91% 50%) 0%, hsl(199 89% 48%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 100% 99%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(199 89% 55%) 50%, hsl(0 0% 98%) 100%);
+    --gradient-mesh: radial-gradient(at 0% 0%, hsl(217 91% 60% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, hsl(199 89% 55% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 100% 100%, hsl(142 76% 50% / 0.2) 0px, transparent 50%),
+                     radial-gradient(at 0% 100%, hsl(217 91% 60% / 0.3) 0px, transparent 50%);
+    --glow-primary: 0 0 40px hsl(217 91% 60% / 0.4);
+    --glow-info: 0 0 40px hsl(199 89% 55% / 0.4);
     
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
@@ -130,5 +137,17 @@ All colors MUST be HSL.
 
   .section-padding {
     @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .glass-card {
+    @apply bg-background/70 backdrop-blur-xl border border-border/50 shadow-2xl;
+  }
+
+  .neon-border {
+    @apply border-2 border-primary/50 shadow-[0_0_15px_rgba(59,130,246,0.3)];
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
   }
 }
