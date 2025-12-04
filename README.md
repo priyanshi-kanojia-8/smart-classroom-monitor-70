@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+ <b>Smart Classroom Monitoring System </b>
 
-## Project info
+A real-time classroom monitoring system built using an ESP32 and multiple sensors, along with a custom web dashboard that displays live data and safety alerts.
+The goal of this project is to make classrooms safer, smarter, and automated using IoT and Web technologies.
+<br></br>
+ <b>Features</b>
+ <br></br>
+Live Sensor Monitoring
 
-**URL**: https://lovable.dev/projects/4dff3cd2-7f1e-49d9-b7ef-887042f1841e
+Temperature & Humidity (DHT11)
 
-## How can I edit this code?
+Motion Detection (PIR Sensor)
 
-There are several ways of editing your application.
+Flame / Fire Detection (Flame Sensor)
 
-**Use Lovable**
+Noise Level Detection (Sound Sensor)
+<br></br>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4dff3cd2-7f1e-49d9-b7ef-887042f1841e) and start prompting.
+<b> Automatic Alerts</b>
+<br></br>
 
-Changes made via Lovable will be committed automatically to this repo.
+Buzzer alarm for critical events
 
-**Use your preferred IDE**
+LEDs indicating warning and safe status
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Alerts for fire, unusual motion, or noise spikes
+<br></br>
+<b>  Web Dashboard</b>
+<br></br>
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Clean and simple UI
 
-Follow these steps:
+Real-time data updates
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Visual indicators for alert conditions
+<br></br>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+<b> WiFi-Enabled Communication</b>
+<br></br>
+ESP32 sends data continuously to the backend server
+<br></br>
+<b> Hardware Components</b>
+<br></br>
+ESP32 Development Board
 
-# Step 3: Install the necessary dependencies.
-npm i
+PIR Motion Sensor
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Flame Sensor (Digital Output)
 
-**Edit a file directly in GitHub**
+Sound Sensor
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+DHT11 Temperature & Humidity Sensor
 
-**Use GitHub Codespaces**
+Active Buzzer
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2 LEDs
 
-## What technologies are used for this project?
+Breadboard + Jumper Wires
+<br></br>
+<b> Software Used</b>
+<br></br>
+Frontend: HTML, CSS, JavaScript
 
-This project is built with:
+Backend: Node.js + Express
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+ESP32 Code: Arduino IDE / C++
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4dff3cd2-7f1e-49d9-b7ef-887042f1841e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Dashboard: Custom-built UI ₹
